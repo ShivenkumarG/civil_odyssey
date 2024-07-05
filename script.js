@@ -82,7 +82,7 @@ const makeChart = (a, b) => {
 window.onload = async function () {
   // Load the csv file
   try {
-    const response = await fetch("http://localhost:5500/yearly_cd_EC-Earth3-veg_final.csv");
+    const response = await fetch("https://raw.githubusercontent.com/ShivenkumarG/Probable_Maximum_Precipitation/main/yearly_cd_EC-Earth3-veg_final.csv");
     const data = await response.text();
     const results = Papa.parse(data, { header: true });
     window.data = results.data;
