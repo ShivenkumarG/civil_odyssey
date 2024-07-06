@@ -9,14 +9,21 @@
     .image-container {
       display: flex;
       justify-content: center;
+      flex-wrap: wrap; /* Allow images to wrap to the next line */
       margin-bottom: 20px; /* Add margin between the image rows */
     }
     .image-container img {
       max-width: 100%;
       height: auto;
-      margin: 0 10px; /* Add margin between the images */
+      margin: 10px; /* Add margin around the images */
     }
     /* Basic styling for the navigation bar */
+    nav ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+    }
     nav ul li {
       padding: 10px 20px;
     }
@@ -32,13 +39,56 @@
     nav ul li a:hover {
       color: #fff;
     }
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px;
+    }
+    .logo-title-container {
+      display: flex;
+      align-items: center;
+    }
+    /* Hamburger menu icon */
+    .menu-icon {
+      display: none;
+      cursor: pointer;
+    }
+    .menu-icon div {
+      width: 25px;
+      height: 3px;
+      background-color: white;
+      margin: 5px;
+    }
+    /* Responsive styles */
+    @media (max-width: 768px) {
+      nav ul {
+        flex-direction: column;
+        display: none;
+        width: 100%;
+      }
+      nav ul li {
+        text-align: center;
+      }
+      .menu-icon {
+        display: block;
+      }
+      nav ul.show {
+        display: flex;
+      }
+    }
   </style>
 </head>
 <body>
   <header>
-    <div>
+    <div class="logo-title-container">
       <img src="images/logo.jpg" alt="logo" />
       <h2>Probable Maximum Precipitation</h2>
+    </div>
+    <div class="menu-icon" onclick="toggleMenu()">
+      <div></div>
+      <div></div>
+      <div></div>
     </div>
     <nav>
       <ul>
@@ -50,13 +100,14 @@
       </ul>
     </nav>
   </header>
-
+  <img src="images/Web_head_image.png" width="100%" alt="Web_head_image1">
   <section>
+    
     <h2>Research Works</h2>
 
     <article>
       <h3>1. Storm water Infrastructure design in southern ontario in light of climate change:</h3>
-      <p>
+      <p style="text-align: justify;">
         Urban stormwater runoff management systems are typically designed to comply with
         established performance standards, relying on past climate data assumed to be consistent
         over time. However, with insights gleaned from climate change impact research, it becomes
@@ -77,15 +128,13 @@
       </p>
       <div class="image-container">
         <img src="images/Internship_Project.png" width="800px" alt="PMP Image 1">
-        
-        <!--<img src="images/frequency_factor.png" width="300px" alt="PMP Image 2">-->
       </div>
       <figcaption>Comparison between daily observed and simulated stream flow at Batchawana watershed for 4 years</figcaption>
     </article>
 
     <article>
       <h3>2. Probable Maximum Precipitation under changing climate conditions in India region:</h3>
-      <p>
+      <p style="text-align: justify;">
         the greatest depth of precipitation for a given duration meteorologically possible for a 
         design watershed or a given storm area at a particular location at a particular time of year, 
         with no allowance made for long-term climatic trends.
@@ -97,7 +146,7 @@
     </article>
     <article>
       <h3>3. Identification of Construction Waste in India:</h3>
-      <p>
+      <p style="text-align: justify;">
         Monitoring construction waste is crucial for promoting sustainable development and reducing environmental impact. 
         By keeping track of the types and quantities of waste generated, builders can identify opportunities for recycling 
         and reusing materials, which conserves natural resources and reduces landfill use. <br>
@@ -138,7 +187,13 @@
     <!-- Add more articles as needed -->
   </section>
 
-  <script src="script.js"></script>
+  <script>
+      function toggleMenu() {
+        const nav = document.querySelector('nav ul');
+        nav.classList.toggle('show');
+      }
+  </script>
+  
 </body>
 <footer>
   <div class="container">

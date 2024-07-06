@@ -20,6 +20,8 @@ header {
   color: #fff;
   padding: 1em;
   text-align: center;
+  position: fixed;
+  width: 100%;
 }
 
 header div {
@@ -78,13 +80,15 @@ img {
 }
 
 footer {
+  width: 100%;
+  overflow-x: hidden;
   background-color: #333;
   color: #fff;
   text-align: center;
-  padding: 1em;
-  position: fixed;
+  padding: 10px 0;
+  position: relative;
+  left: 0;
   bottom: 0;
-  width: 100%;
 }
 
 #pmpForm{
@@ -165,4 +169,3 @@ footer {
   grid-template-columns: repeat(2, 2fr);
   gap: 20px;
 }
-

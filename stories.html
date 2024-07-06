@@ -7,73 +7,138 @@
     <link rel="stylesheet" href="styles.css">
     <title>Home</title>
     <style>
-        .image-container {
-          display: flex;
-          justify-content: center;
-          margin-bottom: 20px; /* Add margin between the image rows */
+      .image-container {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 20px; /* Add margin between the image rows */
+      }
+      .image-container img {
+        max-width: 100%;
+        height: auto;
+        margin: 0 10px; /* Add margin between the images */
+      }
+      /* Basic styling for the navigation bar */
+      nav ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+      }
+      nav ul li {
+        padding: 10px 20px;
+      }
+      nav ul li a {
+        color: white;
+        text-decoration: none;
+      }
+      /* Hover effect for the home tab */
+      nav ul li:hover {
+        background-color: #39e656;
+        transition: background-color 0.3s ease;
+      }
+      nav ul li a:hover {
+        color: #fff;
+      }
+      header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px;
+      }
+      .logo-title-container {
+        display: flex;
+        align-items: center;
+      }
+      /* Hamburger menu icon */
+      .menu-icon {
+        display: none;
+        cursor: pointer;
+      }
+      .menu-icon div {
+        width: 25px;
+        height: 3px;
+        background-color: white;
+        margin: 5px;
+      }
+      /* Responsive styles */
+      @media (max-width: 768px) {
+        nav ul {
+          flex-direction: column;
+          display: none;
+          width: 100%;
         }
-        .image-container img {
-          max-width: 100%;
-          height: auto;
-          margin: 0 10px; /* Add margin between the images */
-        }
-        /* Basic styling for the navigation bar */
         nav ul li {
-          padding: 10px 20px;
+          text-align: center;
         }
-        nav ul li a {
-          color: white;
-          text-decoration: none;
+        .menu-icon {
+          display: block;
         }
-        /* Hover effect for the home tab */
-        nav ul li:hover {
-          background-color: #39e656;
-          transition: background-color 0.3s ease;
+        nav ul.show {
+          display: flex;
         }
-        nav ul li a:hover {
-          color: #fff;
-        }
-      </style>
+      }
+    </style>
 </head>
 <body>
-    <header>
-        <nav>
-            <ul>
-                <div>
-                  <img 
-                  src="images/logo.jpg" 
-                  alt="logo">
-                  <h2>Probable Maximum Precipitation</h2>
-                </div>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="calculatepmp.html">Calculate PMP</a></li>
-                <li><a href="researchwork.html">Research Works</a></li>
-                <li><a href="stories.html">Life Stories</a></li>
-                <li><a href="about.html">About Us</a></li>
-            </ul>
-        </nav>
-    </header>
-    
+  <header>
+    <div class="logo-title-container">
+      <img src="images/logo.jpg" alt="logo" />
+      <h2>Probable Maximum Precipitation</h2>
+    </div>
+    <div class="menu-icon" onclick="toggleMenu()">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="calculatepmp.html">Calculate PMP</a></li>
+        <li><a href="researchwork.html">Research Works</a></li>
+        <li><a href="stories.html">Life Stories</a></li>
+        <li><a href="about.html">About Us</a></li>
+      </ul>
+    </nav>
+  </header>
+  <img src="images/Web_head_image.png" width="100%" alt="Web_head_image1">
     <section>
-        <h1>Creation Of A creature</h1>
-        <article>
-            <div>
-                <h3>Why is it called “Creation of A Creature”?</h3>
-                <p>First and foremost, I enjoy symmetry, and as we can see, Creature and Creation both contain eight alphabet letters and begin with the letter C.
-                    Second, I was a Hindi medium student until 12th grade, so I was not good at English at the time. Then one day, after the celebration of Independence Day, 
-                    we were having snacks together with the headmaster and other teachers, and they just tried to check my English and told me to translate a sentence 
-                    called " मनुष्य एक सामाजिक प्राणी है”, But I couldn't recall the exact English phrase for " प्राणी " so I just translated it as "Human is a Social species." But I wasn't satisfied with the term I stated, so I went to Google and found the word creature, which I couldn't forget.
-                </p>
-            </div>
-            <figure class="center-image">
-                <img src="story_images/Picture1.png" width="500px" alt="Picture1">
-                <figcaption>Child</figcaption>
-            </figure>
-        </article>
+      <h1 style="text-align:center;">Creation Of A Creature</h1> <br />
+      <article>
+        <div style="text-align:justify;">
+          <h3 style="text-align:center;">Why is it called “Creation of A Creature”?</h3>
+            <p>First and foremost, I enjoy symmetry, and as we can see, Creature and Creation both contain eight alphabet letters and begin with the letter C.
+              Second, I was a Hindi medium student until 12th grade, so I was not good at English at the time. Then one day, after the celebration of Independence Day, 
+              we were having snacks together with the headmaster and other teachers, and they just tried to check my English and told me to translate a sentence 
+              called " मनुष्य एक सामाजिक प्राणी है”, But I couldn't recall the exact English phrase for " प्राणी " so I just translated it as "Human is a Social species." But I wasn't satisfied with the term I stated, so I went to Google and found the word creature, which I couldn't forget.
+            </p>
+        </div>
+          <figure class="center-image">
+            <img src="story_images/Picture1.png" width="500px" alt="Picture1">
+            <figcaption>Child</figcaption>
+          </figure>
+        <div style="text-align:justify;">
+          <h3 style="text-align:center;">What is it about?</h3>
+          <p>It is a human being's journey through life. This chronicles a boy's life from its infancy, highlighting his modest accomplishments and feelings.
+          </p>
+        </div>
+        <div style="text-align:justify;">
+          <h3 style="text-align:center;">What are our thoughts about humans?</h3>
+          <p>Humans are an awe-inspiring mix of physical, intellectual, emotional, and social characteristics in this vast universe. Through their desires, 
+            accomplishments, and contributions, they continue to influence the world around them, leaving an everlasting imprint on the fabric of life.
+          </p>
+        </div>
+        <h3 style="text-align:center;"><strong> Writer: Shivendra Kumar Gupta </strong></h3>
+        <h3 style="text-align:center;"><strong> Start Date: 08/07/2023, Place: London, Ontario, Canada </strong></h3>
+      </article><br />
+      <h1 > Wait </h1> <br />
 
-        
     </section>
-    <script src="script.js"></script>
+    <script>
+      function toggleMenu() {
+        const nav = document.querySelector('nav ul');
+        nav.classList.toggle('show');
+      }
+    </script>
 </body>
 <footer>
     <div class="container">
