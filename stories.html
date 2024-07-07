@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Learn about Probable Maximum Precipitation (PMP) and its applications in hydrology, meteorology, and engineering.">
     <link rel="stylesheet" href="styles.css">
-    <title>Home</title>
+    <title>Life Stories</title>
     <style>
       .image-container {
         display: flex;
@@ -76,6 +76,20 @@
         nav ul.show {
           display: flex;
         }
+      }
+      .chapter-content {
+            display: none;
+            margin-top: 0px;
+            /*border: 1px solid #ddd;*/
+            padding: 0px;
+            text-align: justify;
+      }
+      .chapter-title {
+            cursor: pointer;
+            margin: 10px 0;
+            font-weight: bold;
+            color: rgb(43, 8, 201);
+            text-align: center;
       }
     </style>
 </head>
@@ -169,17 +183,77 @@
  
             </p>
             <figure class="center-image">
-              <img src="story_images/Picture2.png" width="500px" alt="Picture1">
+              <img src="story_images/Picture2.png" width="500px" alt="Picture2">
               <figcaption>The family</figcaption>
             </figure>
         </div>
       </article>
+      <h1 style="text-align: center;"> The story of Shiva starts here </h1>
+      <div class="chapter">
+        <div class="chapter-title" onclick="toggleContent('content1')"><h3>Chapter 1: After 4th birthday</h3></div>
+        <div id="content1" class="chapter-content">
+          <p>Shiva started going to school with his sisters. Despite his reluctance, he had to go because his sister had said she 
+            wouldn't attend if he didn't. Rama would drop him off at school, but as a child, he wanted to come back home with his 
+            mother. His mother would threaten, "If you don't go to school, the barber uncle will cut your ear," (the barber's shop 
+            was right in front of the school) which kept Shiva at school.
+          </p>
+          <figure class="center-image">
+            <img src="story_images/Picture3.png" width="500px" alt="Picture3">
+            <figcaption>Shiva's Fear of the Barber</figcaption>
+          </figure>
+        </div>
+      </div>
 
+      <div class="chapter">
+        <div class="chapter-title" onclick="toggleContent('content2')"><h3>Chapter 2: After 5th birthday</h3></div>
+        <div id="content2" class="chapter-content">
+          <p>Shiva was formally enrolled in school. The school had a policy where if three children from the same family were enrolled,
+             the youngest child’s fees would be waived. Due to his basic understanding, Shiva was admitted directly into 1st grade 
+             instead of nursery. Ram chose to enroll him in a private school called Saraswati Shishu Mandir because the village's 
+             government school had poor teaching conditions. Additionally, Shiva and his sisters received home instruction from a 
+             tutor. Shiva excelled and passed the 1st grade exams with the highest rank in his school.
+          </p>
+          <figure class="center-image">
+            <img src="story_images/Picture4.png" width="500px" alt="Picture4">
+            <figcaption>Shiva's Fear of the Barber</figcaption>
+          </figure>
+        </div>
+      </div>
+
+      <div class="chapter">
+        <div class="chapter-title" onclick="toggleContent('content3')"><h3>Chapter 3: After 6th birthday</h3></div>
+        <div id="content3" class="chapter-content">
+          <p>When Shiva was in second grade, he memorized multiplication tables from 2 to 30, a feat even 8th graders struggled with. 
+            This became a notable memory at his school. One day, he was called to the classroom of the 7th and 8th graders (due to 
+            limited student numbers, rooms, and teachers, students from classes 1st and 2nd sat together, as did students from 3rd and 
+            4th, and so on until the 8th grade) to check their classwork, where they had to write tables from 21 to 30. The teacher 
+            handed Shiva a small stick, telling him to use it if anyone made mistakes. Shiva examined their work and found errors in 
+            each one but refused to use the stick, despite the older students agreeing to be corrected by the younger boy and 
+            playfully wanting to be disciplined by him.
+          </p>
+          <figure class="center-image">
+            <img src="story_images/Picture5.png" width="500px" alt="Picture5">
+            <figcaption>Shiva's Fear of the Barber</figcaption>
+          </figure>
+          <p>There was a time when he used to get 1 rupee as pocket money. With that, she would buy "chunmun" (a corn puff snack 
+            available for 1 rupee) during the lunch break after prayers. One student would collect money from everyone who wanted 
+            chunmun, go to the shop to buy a whole bundle, and then distribute it to everyone.
+          </p>
+        </div>
+      </div>
     </section>
     <script>
       function toggleMenu() {
         const nav = document.querySelector('nav ul');
         nav.classList.toggle('show');
+      }
+      function toggleContent(id) {
+            var content = document.getElementById(id);
+            if (content.style.display === "none" || content.style.display === "") {
+                content.style.display = "block";
+            } else {
+                content.style.display = "none";
+            }
       }
     </script>
 </body>
