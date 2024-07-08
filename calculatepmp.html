@@ -56,6 +56,9 @@
     .menu-icon {
       display: none;
       cursor: pointer;
+      position: absolute; /* Added to position the icon absolutely */
+      top: 15px; /* Adjust as needed */
+      right: 25px; /* Adjust as needed */
     }
     .menu-icon div {
       width: 25px;
@@ -68,10 +71,15 @@
       nav ul {
         flex-direction: column;
         display: none;
-        width: 100%;
+        position: absolute; /* Ensure the menu is positioned absolutely */
+        top: 60px; /* Adjust based on your header height */
+        right: 0;
+        width: 150px; /* Adjust based on your preference */
+        background-color: #007bff; /* Same as your header background color */
       }
       nav ul li {
-        text-align: center;
+        text-align: right;
+        padding: 10px 20px;
       }
       .menu-icon {
         display: block;
@@ -96,7 +104,7 @@
   <header>
     <div class="logo-title-container">
       <img src="images/logo.jpg" alt="logo" />
-      <h2>Probable Maximum Precipitation</h2>
+      <h2 style = "margin-right: 55px;">Civil Odyssey</h2>
     </div>
     <div class="menu-icon" onclick="toggleMenu()">
       <div></div>
