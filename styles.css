@@ -140,6 +140,7 @@ footer {
   display: flex;
   justify-content: space-around;
   margin-bottom: 20px;
+  flex-wrap: wrap;
 }
 
 .main-result-box {
