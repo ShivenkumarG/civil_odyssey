@@ -5,98 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="styles.css" />
   <title>Calculate PMP</title>
-  <style>
-    table {
-      width: 100%;
-      text-align: center; /* Center the content horizontally */
-    }
-    td {
-      vertical-align: top; /* Align content to the top of each cell */
-      padding: 10px; /* Add padding for better spacing */
-    }
-    img {
-      display: block; /* Make images behave like block elements */
-      max-width: 100%;
-      height: auto;
-    }
-    /* Basic styling for the navigation bar */
-    nav ul {
-      list-style-type: none;
-      margin: 0;
-      padding: 0;
-      display: flex;
-      flex-wrap: wrap;
-    }
-    nav ul li {
-      padding: 10px 20px;
-    }
-    nav ul li a {
-      color: white;
-      text-decoration: none;
-    }
-    /* Hover effect for the home tab */
-    nav ul li:hover {
-      background-color: #39e656;
-      transition: background-color 0.3s ease;
-    }
-    nav ul li a:hover {
-      color: #fff;
-    }
-    header {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 10px;
-    }
-    .logo-title-container {
-      display: flex;
-      align-items: center;
-    }
-    /* Hamburger menu icon */
-    .menu-icon {
-      display: none;
-      cursor: pointer;
-      position: absolute; /* Added to position the icon absolutely */
-      top: 15px; /* Adjust as needed */
-      right: 25px; /* Adjust as needed */
-    }
-    .menu-icon div {
-      width: 25px;
-      height: 3px;
-      background-color: white;
-      margin: 5px;
-    }
-    /* Responsive styles */
-    @media (max-width: 768px) {
-      nav ul {
-        flex-direction: column;
-        display: none;
-        position: absolute; /* Ensure the menu is positioned absolutely */
-        top: 60px; /* Adjust based on your header height */
-        right: 0;
-        width: 150px; /* Adjust based on your preference */
-        background-color: #007bff; /* Same as your header background color */
-      }
-      nav ul li {
-        text-align: right;
-        padding: 10px 20px;
-      }
-      .menu-icon {
-        display: block;
-      }
-      nav ul.show {
-        display: flex;
-      }
-    }
-    .container {
-      max-width: 100%;
-      overflow-x: hidden;
-    }
-    footer {
-      width: 100%;
-      overflow-x: hidden;
-    }
-  </style>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
@@ -123,6 +31,35 @@
   </header>
   <img src="images/Web_head_image.png" width="100%" alt="Web_head_image1">
   <section>
+    <article>
+      <div>
+        <h2>What is PMP:</h2>
+        <p style="text-align: justify;">the greatest depth of precipitation for a given duration meteorologically
+          possible for a design watershed or a given
+          storm area at a particular location at a particular time of year, with no allowance made for long-term
+          climatic
+          trends.
+        <ul>
+          <li style="text-align: justify;">
+            <strong>Enveloping Curve:</strong> <br />
+            It's a curve that encompasses all potential peak frequency factors, with the highest achievable frequency
+            factor closely aligning with the curve's peak, which could also manifest in similar regions or basins.
+          </li>
+          <li style="text-align: justify;">
+            <strong>Frequency Factor:</strong> <br />
+            In PMP calculation, the frequency factor indicates the maximum distance from the mean in terms of standard
+            deviation units.
+          </li>
+          <!-- Add more list items as needed -->
+        </ul>
+        </p>
+      </div>
+      <figure class="image-container">
+        <img src="images/PMP_comparison_1.png" width="500px" alt="PMP Image 1">
+      </figure>
+      <figcaption>Frequency Factors for all India Region</figcaption>
+    </article>
+
     <h2 style="display: grid; align-items: center; justify-items: center; text-align: center;">
       Calculate Probable Maximum Precipitation (PMP)
     </h2>
@@ -147,6 +84,73 @@
     <div style="max-width: 100%; display: flex; justify-content: center; align-items: center; margin: 5% auto;">
       <canvas id="myChart" style="max-width: 90%; height: auto;"></canvas>
     </div>
+
+    <article>
+      <div>
+        <h3>Advantages of Including Climate Change:</h3>
+        <p style="text-align: justify;">Overall, incorporating climate change data into calculations of probable maximum
+          precipitation enables
+          more robust and sustainable infrastructure development, contributing to the long-term well-being and
+          safety of societies.
+        <ul>
+          <li style="text-align: justify;">
+            <strong>Long-term Planning:</strong> <br />
+            By factoring in climate change, planners can develop infrastructure that remains effective and functional
+            over its intended lifespan, even as environmental conditions evolve.
+          </li>
+          <!-- Add more list items as needed -->
+        </ul>
+        </p>
+      </div>
+      <figure class="image-container">
+        <img src="images/Climate change.png" width="500px" alt="PMP Image 2">
+      </figure>
+      <figcaption>Climate Change <br /> Image credit: ParabolStudio | Shutterstock.com</figcaption>
+    </article>
+
+    <article>
+      <div>
+        <h3>Why is it Important?</h3>
+        <p style="text-align: justify;">
+        <ul>
+          <li style="text-align: justify;">It's crucial to estimate the maximum probable precipitation when designing
+            dams and other infrastructure
+            because it helps ensure that these structures can withstand the most extreme weather conditions they might
+            encounter. By accurately predicting the maximum amount of rainfall likely to occur within a certain period,
+            engineers can design infrastructure with appropriate safety margins to prevent failures or catastrophic
+            damage during severe storms or flooding events.
+          </li>
+          <li style="text-align: justify;"> Challenges stemming from climate change demand immediate action, as
+            highlighted in the newspaper articles
+            and news clippings provided below.
+
+          </li>
+          <br />
+          <figure class="image-container">
+            <img src="images/News_on_CC.png" width="500px" alt="Problem caused by an unexpected flood.">
+          </figure>
+          <figcaption>News Cuttings</figcaption>
+          <br />
+          <li style="text-align: justify;">This careful consideration of precipitation helps enhance the resilience and
+            reliability of critical
+            infrastructure, safeguarding communities and minimizing the risk of disasters.
+          </li>
+          <!-- Add more list items as needed -->
+        </ul>
+        </p>
+      </div>
+      <!--
+            <figure class="center-image">
+                <img src="images/Flood.png" width="500px" alt="Problem caused by an unexpected flood.">
+                <figcaption>Problem caused by an unexpected flood</figcaption>
+            </figure>
+            -->
+      <br />
+      <figure class="image-container">
+        <img src="images/CC_Effect1.png" width="500px" alt="Problem caused by an unexpected flood.">
+      </figure>
+      <figcaption>Climate Change Effect</figcaption>
+    </article>
   </section>
 
   <script>

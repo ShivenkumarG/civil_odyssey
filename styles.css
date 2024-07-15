@@ -35,23 +35,6 @@ header img {
   margin-right: 10px;
 }
 
-nav ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-nav li {
-  display: inline;
-  margin-right: 20px;
-}
-
-nav a {
-  text-decoration: none;
-  color: #fff;
-  font-weight: bold;
-}
-
 section {
   padding: 20px;
 }
@@ -105,8 +88,11 @@ footer {
 }
 
 
-.center-image {
-  text-align: center;
+.center-image{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
 }
 
 .output-container {
@@ -166,7 +152,141 @@ footer {
 }
 
 .output-container {
-  display: grid;
+  /* display: grid;
   grid-template-columns: repeat(2, 2fr);
-  gap: 20px;
+  gap: 20px; */
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.image-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px; /* Add margin between the image rows */
+}
+.image-container img {
+  max-width: 100%;
+  height: auto;
+  margin: 0 10px; /* Add margin between the images */
+}
+/* Basic styling for the navigation bar */
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+nav ul li {
+  padding: 10px 20px;
+}
+nav ul li a {
+  color: white;
+  text-decoration: none;
+}
+/* Hover effect for the home tab */
+nav ul li:hover {
+  background-color: #39e656;
+  transition: background-color 0.3s ease;
+}
+nav ul li a:hover {
+  color: #fff;
+}
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+}
+.logo-title-container {
+  display: flex;
+  align-items: center;
+}
+/* Hamburger menu icon */
+.menu-icon {
+  display: none;
+  cursor: pointer;
+  position: absolute; /* Added to position the icon absolutely */
+  top: 15px; /* Adjust as needed */
+  right: 25px; /* Adjust as needed */
+}
+.menu-icon div {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  margin: 5px;
+}
+/* Responsive styles */
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    display: none;
+    position: absolute; /* Ensure the menu is positioned absolutely */
+    top: 60px; /* Adjust based on your header height */
+    right: 0;
+    width: 150px; /* Adjust based on your preference */
+    background-color: #007bff; /* Same as your header background color */
+  }
+  nav ul li {
+    text-align: right;
+    padding: 10px 20px;
+    margin-right: 20px;
+  }
+  .menu-icon {
+    display: block;
+  }
+  nav ul.show {
+    display: flex;
+  }
+}
+
+.chapter-content {
+  display: none;
+  margin-top: 0px;
+  /*border: 1px solid #ddd;*/
+  padding: 0px;
+  text-align: justify;
+}
+.chapter-title {
+  cursor: pointer;
+  margin: 10px 0;
+  font-weight: bold;
+  color: rgb(43, 8, 201);
+  text-align: center;
+}
+.double-line {
+border: none;
+border-top: 3px double #000; /* Adjust thickness and color as needed */
+margin: 20px 0; /* Adjust margin as needed */
+}
+
+/* hibib */
+.image-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap; /* Allow images to wrap to the next line */
+  margin-bottom: 20px; /* Add margin between the image rows */
+}
+table {
+  width: 100%;
+  text-align: center; /* Center the content horizontally */
+}
+td {
+  vertical-align: top; /* Align content to the top of each cell */
+  padding: 10px; /* Add padding for better spacing */
+}
+img {
+  display: block; /* Make images behave like block elements */
+  max-width: 100%;
+  height: auto;
+}
+/* Basic styling for the navigation bar */
+.container {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+footer {
+  width: 100%;
+  overflow-x: hidden;
 }

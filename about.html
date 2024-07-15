@@ -5,91 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="styles.css" />
   <title>About Us</title>
-  <style>
-    table {
-      width: 100%;
-      text-align: center; /* Center the content horizontally */
-    }
-    td {
-      vertical-align: top; /* Align content to the top of each cell */
-      padding: 10px; /* Add padding for better spacing */
-    }
-    img {
-      display: block; /* Make images behave like block elements */
-      margin: 0 auto; /* Center the images horizontally */
-      max-width: 100%;
-      height: auto;
-    }
-    /* Basic styling for the navigation bar */
-    nav ul {
-      list-style-type: none;
-      margin: 0;
-      padding: 0;
-      display: flex;
-      flex-direction: row;
-    }
-    nav ul li {
-      padding: 10px 20px;
-    }
-    nav ul li a {
-      color: white;
-      text-decoration: none;
-    }
-    /* Hover effect for the home tab */
-    nav ul li:hover {
-      background-color: #39e656;
-      transition: background-color 0.3s ease;
-    }
-    nav ul li a:hover {
-      color: #fff;
-    }
-    header {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 10px;
-    }
-    .logo-title-container {
-      display: flex;
-      align-items: center;
-    }
-    /* Hamburger menu icon */
-    .menu-icon {
-      display: none;
-      cursor: pointer;
-      position: absolute; /* Added to position the icon absolutely */
-      top: 15px; /* Adjust as needed */
-      right: 25px; /* Adjust as needed */
-    }
-    .menu-icon div {
-      width: 25px;
-      height: 3px;
-      background-color: white;
-      margin: 5px;
-    }
-    /* Responsive styles */
-    @media (max-width: 768px) {
-      nav ul {
-        flex-direction: column;
-        display: none;
-        position: absolute; /* Ensure the menu is positioned absolutely */
-        top: 60px; /* Adjust based on your header height */
-        right: 0;
-        width: 150px; /* Adjust based on your preference */
-        background-color: #007bff; /* Same as your header background color */
-      }
-      nav ul li {
-        text-align: right;
-        padding: 10px 20px;
-      }
-      .menu-icon {
-        display: block;
-      }
-      nav ul.show {
-        display: flex;
-      }
-    }
-  </style>
 </head>
 <body>
   <header>
@@ -115,27 +30,16 @@
   <img src="images/Web_head_image.png" width="100%" alt="Web_head_image1">
 
   <section>
+    <h1 style="text-align: center;">Meet the Teams</h1><br/>
     
-    <h2>About Us</h2>
-
-    <p style = "text-align: justify">
-      Welcome to Probable Maximum Precipitation (PMP), where we are dedicated
-      to advancing knowledge and research in the field of hydrology and
-      meteorology. Our team of experts is committed to providing valuable
-      insights into Probable Maximum Precipitation and its applications in
-      various engineering and environmental contexts.
-    </p>
-
-    <h3>Our Mission</h3>
-    <p style = "text-align: justify">
-      Our mission is to contribute to the understanding of probable maximum
-      precipitation, conduct cutting-edge research, and promote the
-      responsible use of this knowledge in engineering, meteorology, and
-      related fields.
-    </p>
-
-    <h3>Meet the Team</h3>
     <table>
+      <h3 style = "text-align: center;">Probable Maximum Precipitation Under Changing Climate Conditions</h3>
+      <p style = "text-align: justify">
+        Our mission is to contribute to the understanding of probable maximum
+        precipitation, conduct cutting-edge research, and promote the
+        responsible use of this knowledge in engineering, meteorology, and
+        related fields.
+      </p>
       <tr>
         <td>
           <img 
@@ -156,6 +60,38 @@
           Associate Professor at IIT Tirupati <br />
           Project Director at IITTNIF <br />
           MITACS Accelerate Fellowship @UWO
+          <br />
+        </td>
+      </tr>
+      <!-- Add more team members as needed -->
+    </table>
+
+    <table>
+      <h3 style = "text-align: center;">Storm water Infrastructure design in southern ontario in light of climate change</h3>
+      <p style = "text-align: justify">
+        We examined the current infrastructure's adequacy under projected climate conditions, identifying areas where the existing d
+        esign may fall short. In cases where deficiencies were found, we explored mitigation strategies to address these challenges.
+      </p>
+      <tr>
+        <td>
+          <img 
+          style="margin: 0 auto;"
+          src="images/Shivendra_Image2.jpg" width="300px" alt="Shivendra Kumar Gupta" />
+          <strong>Shivendra Kumar Gupta</strong><br />
+          Researcher <br />
+          Student at IIT Tirupati <br />
+          Ex- Researcher at Western University <br />
+          MITACS GRI'23 Intern @UWO
+        </td>
+        <td>
+          <img 
+          style="margin: 0 auto;"
+          src="images/M.Reza_Najafi.jpg" width="300px" alt="Dr. M. Reza Najafi" />
+          <strong>Dr. M. Reza Najafi</strong><br />
+          Guide<br />
+          Associate Professor at Western University <br />
+          Department of Civil and Environmental Engineering<br />
+          Postdoctoral Researcher, The Ohio State University, USA
           <br />
         </td>
       </tr>

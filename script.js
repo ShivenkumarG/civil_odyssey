@@ -185,7 +185,6 @@ document.addEventListener("DOMContentLoaded", function () {
     
       resultDiv.appendChild(mainResultsContainer);
       resultDiv.appendChild(outputContainer);
-    
       makeChart(parseFloat(a), parseFloat(b));
     } else {
       resultDiv.innerHTML = `
