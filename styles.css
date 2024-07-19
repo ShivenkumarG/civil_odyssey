@@ -22,6 +22,7 @@ header {
   text-align: center;
   position: fixed;
   width: 100%;
+  z-index: 1000;
 }
 
 header div {
@@ -286,6 +287,74 @@ img {
   max-width: 100%;
   overflow-x: hidden;
 }
+
+/* Custom CSS for the carousel */
+.carousel-inner img {
+  max-width: 70%; /* Set the maximum width for the images */
+  width: 70%; /* Ensure the image width is 100% of its container */
+  height: auto; /* Let the height adjust based on the width */
+  object-fit: cover; /* Make sure the images cover the carousel */
+  margin: 0 auto; /* Center the images */
+}
+
+.carousel-indicators button {
+  background-color: #333; /* Change the indicator color */
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: rgba(0, 0, 0, 0.5); /* Add a background color to the control icons */
+  border-radius: 50%; /* Make the control icons circular */
+  width: 50px; /* Set a specific width */
+  height: 50px; /* Set a specific height */
+}
+
+.carousel-caption {
+  background-color: rgba(0, 0, 0, 0.6); /* Add a semi-transparent background to the captions */
+  padding: 10px 20px; /* Add padding around the text */
+  border-radius: 10px; /* Round the corners of the captions */
+}
+
+.carousel-caption h5 {
+  font-size: 2rem; /* Increase the font size of the caption title */
+  font-weight: bold; /* Make the caption title bold */
+}
+
+.carousel-caption p {
+  font-size: 1.2rem; /* Increase the font size of the caption text */
+}
+
+.carousel-container {
+  margin-top: 0px; /* Add margin at the top to avoid overlap with the header */
+  padding-top: 0px; /* Add padding at the top for extra space */
+  box-sizing: border-box;
+}
+
+@media (max-width: 768px) {
+  .carousel-inner img {
+    max-width: 100%; /* Ensure the image width is 100% on smaller screens */
+    height: auto; /* Adjust the height automatically */
+  }
+  .carousel-caption h5 {
+    font-size: 1.5rem; /* Adjust font size for smaller screens */
+  }
+  .carousel-caption p {
+    font-size: 1rem; /* Adjust font size for smaller screens */
+  }
+}
+
+@media (max-width: 576px) {
+  .carousel-caption h5 {
+    font-size: 1.2rem; /* Further adjust font size for very small screens */
+  }
+  .carousel-caption p {
+    font-size: 0.9rem; /* Further adjust font size for very small screens */
+  }
+  .carousel-container {
+    margin-top: 60px; /* Reduce the top margin for very small screens */
+  }
+}
+
 footer {
   width: 100%;
   overflow-x: hidden;
